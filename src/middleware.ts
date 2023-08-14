@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-
 export const config = {
   matcher: [
     /*
@@ -19,21 +18,11 @@ export const config = {
 
 export default async function middleware(request:NextRequest) {
   const { pathname } = request.nextUrl;
-  const requestHeaders = new Headers(request.headers)
-  
-  // Set a new response header
-  requestHeaders.set("x-middleware-cache", "no-cache");
- 
-  const response = NextResponse.next({
-    request: {
-      // New request headers
-      headers: requestHeaders
-    }
-  })
+  const response = NextResponse.next();
  
   // Set a new response header
   response.headers.set("x-middleware-cache", "no-cache");
 
-  console.log(pathname);
-  return response
+  console.log('pathname', '=>', pathname);
+  return response;
 }
