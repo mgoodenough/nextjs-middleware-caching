@@ -17,7 +17,7 @@ Middleware runs before cached content and routes are matched
 
 ```
 git clone https://github.com/mgoodenough/nextjs-middleware-caching
-cd next-auth-example
+cd nextjs-middleware-caching
 npm install
 ```
 
