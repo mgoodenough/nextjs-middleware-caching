@@ -29,16 +29,19 @@ npm run dev
 
 ### 3. Test the Bug:
 
-#### 1. From the navigation menu on the `Home` page, click the `Dashboard` Link. Prior to page load, the middleware will log the following snippet to the console:
+#### Step 1: 
+From the navigation menu on the `Home` page, click the `Dashboard` Link. Prior to page load, the middleware will log the following snippet to the console:
 ```
 pathname => /dashboard
 ```
-#### 2. From the navigation menu on the `Dashboard` page, click the `Home` Link. Prior to page load, the middleware will log the following snippet to the console:
+#### Step 2: 
+From the navigation menu on the `Dashboard` page, click the `Home` Link. Prior to page load, the middleware will log the following snippet to the console:
 ```
 pathname => /
 ```
-#### 3. From the navigation menu on the `Home` page, click the `Dashboard` Link. Prior to page load, the middleware does not trigger.
+#### Step 3: 
+From the navigation menu on the `Home` page, click the `Dashboard` Link. Prior to page load, the middleware does not run.
 
 ## Notes
-#### 1. `prefetch={false}` has been added to each Link, but the defect is the same without this attribute set
-#### 2. The above example focuses on the `Dashboard` Link, however, the same secario can be run against any of the Links on the page 
+#### 1. `prefetch={false}` has been added to each Link, but the defect behaves the same regardless of this attribute being set.
+#### 2. The above example focuses on the `Dashboard` Link, however, the same secario can be run against any of the Links on the page. 
